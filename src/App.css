@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container {
+  position: relative;
+  padding: 20px 0;
   min-height: 100vh;
+  background: #ffea00;
+}
+
+.game-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 0 50px;
+}
+
+.figures {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 50px;
+}
+
+.title {
+  text-align: center;
+  font-size: 60px;
+}
+.figures-user {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:  wrap
+}
+.figures-opponents,
+.figures-user {
+  width: 50%;
+}
+
+.figures-opponents img {
+  margin: 0 auto;
+}
+
+.figures-opponents {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  align-content: center;
+  border-left: 5px solid rgba(0,0,0, 0.3);
 }
 
-.App-link {
-  color: #61dafb;
+.score  {
+  font-size: 30px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.figure {
+  margin: 15px;
+  opacity: 0.75;
+  width: 180px;
+  transition: all 0.2s ease-in ;
+}
+.question {
+  width: 180px;
+}
+
+.figure:hover {
+  transform: translateY(10px);
+  transition: all 0.2s ease-in ;
+}
+
+.active.figure {
+ opacity: 1;
+}
+
+.winner-container {
+  height: 80px;
+  text-align: center;
+  margin-bottom:80px;
+}
+
+.winner {
+  font-size: 50px;
+  text-transform: capitalize;
+  font-weight: bold;
+
+}
+
+.winner.user {
+  color: #1d661b;
+}
+.winner.opponent {
+  color: #dc4242;
+}
+
+.winner.draw {
+  color: rgba(176, 144, 0, 0.92);
+}
+
+.score {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.next-round {
+  display: block;
+  margin: 0 auto;
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 10px;
+  font-size: 40px;
+  background-color: #dcb600eb;
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 6px 6px 5px 0 rgba(0,0,0,0.35);
+  transition: all 0.2s ease-in ;
+  outline: none;
+}
+.next-round:hover {
+  transition: all 0.2s ease-in ;
+  box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.35);
+}
+
+.next-round:disabled {
+  color: grey;
+  box-shadow: 6px 6px 5px 0 rgba(0,0,0,0.35);
+  transition: all 0.2s ease-in ;
 }
