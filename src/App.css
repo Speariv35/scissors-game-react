@@ -53,6 +53,7 @@
   opacity: 0.75;
   width: 180px;
   transition: all 0.2s ease-in ;
+  cursor: pointer;
 }
 .question {
   width: 180px;
