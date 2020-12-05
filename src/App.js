@@ -92,6 +92,11 @@ function App() {
     return (
         <div className="App">
             <div className="container">
+d                {(winner === 'user' && !readyForNextRound) && (<div className="pyro">
+                    <div className="before"></div>
+                    <div className="after"></div>
+                </div>)
+                }
                 <header className="App-header">
                     <div className='game-container'>
                         <h1 className="title">Scissors-Well-Rock-Paper game</h1>
