@@ -92,7 +92,7 @@ function App() {
     return (
         <div className="App">
             <div className="container">
-d                {(winner === 'user' && !readyForNextRound) && (<div className="pyro">
+                {(winner === 'user' && !readyForNextRound) && (<div className="pyro">
                     <div className="before"></div>
                     <div className="after"></div>
                 </div>)
